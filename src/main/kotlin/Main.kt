@@ -19,14 +19,13 @@ fun main(args: Array<String>) {
      является ли клиент постоянным покупателем
      */
     if (isRegularCustomer) {
-        discount += calculateDiscount(sum) * 0.01
+        discount += (sum - calculateDiscount(sum)) * 0.01
         val finalSum = sum - discount
         println("Покупка -- $sum рублей. \n" + "После применения скидки: $finalSum")
     } else {
         val finalSum = sum - calculateDiscount(sum)
         println("Покупка -- $sum рублей. \n" + "После применения скидки: $finalSum")
     }
-
 }
 
 /*
